@@ -14,9 +14,31 @@
     <!-- 👤 Botão para abrir o perfil -->
     <button id="openProfile">👤 Ver Meu Perfil</button>
 
+    <!-- Botão para abrir a aba de adicionar/remover seguidores -->
+    <button id="openFollowModal" class="follow-button">🔍 Gerenciar Seguidores</button>
+
+    <!-- Modal de Adicionar/Remover Seguidores -->
+    <div id="followModal" class="modal-follow">
+      <div class="modal-content">
+        <h2>Gerenciar Seguidores</h2>
+        <input type="text" id="searchFollower" placeholder="Pesquisar seguidor..." class="search-box">
+        <div id="followersList">
+          <!-- Lista de seguidores será populada aqui -->
+          <div class="follower">
+            <span>Seguidor 1</span>
+            <button class="remove-btn">Remover</button>
+          </div>
+          <div class="follower">
+            <span>Seguidor 2</span>
+            <button class="remove-btn">Remover</button>
+          </div>
+        </div>
+        <button id="closeFollowModal" class="close-btn">Fechar</button>
+      </div>
+    </div>
+
     <!-- 🔗 Script do jogo -->
     <script src="script.js"></script>
-
 
     <script>
       if ("WebSocket" in window) {

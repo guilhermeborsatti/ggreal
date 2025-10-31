@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selecionar Personagem</title>
+  <link rel="stylesheet" href="assets/style_menu.css" />
+</head>
+<body>
+  <h1>Escolha seu personagem</h1>
+  <div class="personagens">
+    <div class="personagem" onclick="selecionar('GOP')">
+      <img src="sprites/GOP1.png" alt="GOP"><p>GOP</p>
+    </div>
+    <div class="personagem" onclick="selecionar('LEO')">
+      <img src="sprites/leo1.png" alt="LEO"><p>LEO</p>
+    </div>
+    <div class="personagem" onclick="selecionar('FABIANO')">
+      <img src="sprites/parado1.png" alt="FABIANO"><p>FABIANO</p>
+    </div>
+  </div>
+
+  <script>
+    function selecionar(nome) {
+      localStorage.setItem('personagemEscolhido', nome);
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
